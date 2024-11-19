@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exploration de Texte</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Exploration de Texte et Recherche</h1>
+        <div class="file-upload">
+            <label for="fileInput">Importer un fichier texte ou Word :</label>
+            <input type="file" id="fileInput" accept=".txt, .docx" onchange="importFile()">
+        </div>
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Rechercher un mot..." oninput="highlightWords()">
+        </div>
+        <div id="textDisplay" class="text-display"></div>
+        <div id="selectedWords" class="selected-words">
+            <h3>Mots sélectionnés :</h3>
+            <ul id="wordList"></ul>
+        </div>
+        <div id="googleResults"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
