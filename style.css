@@ -14,15 +14,6 @@ body {
     padding: 20px;
 }
 
-h1 {
-    font-size: 28px;
-    margin-bottom: 20px;
-}
-
-h2 {
-    font-size: 15px;
-    margin-bottom: 12px;
-}
 
 .file-upload {
     margin: 20px 0;
@@ -89,4 +80,218 @@ input[type="file"] {
     color: #2c3e50;
     padding: 10px;
     border-radius: 5px;
+}
+
+.image-editor {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#imageContainer {
+    margin: 20px auto;
+    border: 1px solid #ecf0f1;
+    display: inline-block;
+    background-color: #34495e;
+}
+
+canvas {
+    display: block;
+    cursor: crosshair;
+}
+
+/* Style général pour les boutons */
+button {
+    background-color: #3498db; /* Couleur de base (bleu) */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Transitions douces */
+}
+
+/* Effet au survol */
+button:hover {
+    background-color: #2980b9; /* Bleu plus foncé */
+    transform: scale(1.05); /* Légère mise en avant */
+}
+
+/* Effet au clic */
+button:active {
+    background-color: #1c6a9e; /* Bleu encore plus foncé */
+    transform: scale(0.98); /* Légère réduction */
+}
+
+/* Centrage et marges des sections de boutons */
+.actions button, .image-editor button {
+    margin: 10px; /* Espacement autour des boutons */
+}
+
+/* Boutons dans le module d'image */
+.image-editor button {
+    background-color: #2ecc71; /* Vert pour différencier */
+}
+
+.image-editor button:hover {
+    background-color: #27ae60; /* Vert foncé au survol */
+}
+
+.image-editor button:active {
+    background-color: #1e8449; /* Vert encore plus foncé au clic */
+}
+
+/* Style général pour les boutons d'importation */
+input[type="file"] {
+    display: none; /* Masquer l'élément par défaut pour appliquer un style personnalisé */
+}
+
+.file-upload label {
+    display: inline-block;
+    background-color: #9b59b6; /* Violet élégant */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Effet au survol */
+.file-upload label:hover {
+    background-color: #8e44ad; /* Violet plus foncé */
+    transform: scale(1.05);
+}
+
+/* Effet au clic */
+.file-upload label:active {
+    background-color: #732d91; /* Violet encore plus foncé */
+    transform: scale(0.98);
+}
+
+/* Style des sections pour les boutons */
+.file-upload, .image-editor {
+    margin: 20px 0;
+}
+
+/* Boutons dans la section d'importation d'images */
+.image-editor input[type="file"] + label {
+    background-color: #f39c12; /* Orange pour les images */
+}
+
+.image-editor input[type="file"] + label:hover {
+    background-color: #e67e22; /* Orange foncé */
+}
+
+.image-editor input[type="file"] + label:active {
+    background-color: #d35400; /* Orange encore plus foncé */
+}
+
+/* Appliquer une police moderne */
+body {
+    font-family: 'Roboto', Arial, sans-serif; /* Police principale : Roboto */
+}
+
+/* Style des titres */
+h1 {
+    font-size: 28px;
+    font-weight: 700; /* Gras */
+    margin-bottom: 20px;
+    color: #f1c40f; /* Jaune pour attirer l'attention */
+    text-transform: uppercase; /* Tout en majuscules */
+    letter-spacing: 2px; /* Espacement entre les lettres */
+}
+
+h2 {
+    font-size: 18px;
+    font-weight: 300; /* Texte léger */
+    line-height: 1.6; /* Espacement entre les lignes */
+    color: #ecf0f1; /* Blanc cassé pour le contraste */
+    margin-bottom: 20px;
+    text-align: justify; /* Alignement justifié pour un look professionnel */
+}
+
+h2 {
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 1.6;
+    color: #ecf0f1;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+h2 span {
+    color: #1abc9c; /* Mettre en évidence des mots-clés en vert */
+    font-weight: bold;
+}
+
+/* Masquer l'input file pour appliquer un style personnalisé au label */
+input[type="file"] {
+    display: none;
+}
+
+/* Style du label qui agit comme un bouton */
+.image-editor label {
+    display: inline-block;
+    background-color: #732d91; /* Couleur de base (bleu) */
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ombre légère */
+}
+
+/* Effet au survol */
+.image-editor label:hover {
+    background-color: #732d91; /* Bleu plus foncé */
+    transform: scale(1.05); /* Légère mise en avant */
+}
+
+/* Effet au clic */
+.image-editor label:active {
+    background-color: #732d91; /* Bleu encore plus foncé */
+    transform: scale(0.98); /* Légère réduction */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Ombre plus subtile */
+}
+
+/* Centrage des éléments */
+.image-editor {
+    text-align: center;
+    margin: 20px 0;
+}
+
+/* Style du bouton de téléchargement */
+.image-editor button {
+    background-color: purple; /* Vert élégant */
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Effet au survol du bouton de téléchargement */
+.image-editor button:hover {
+    background-color: purple; /* Vert plus foncé */
+    transform: scale(1.05);
+}
+
+/* Effet au clic du bouton de téléchargement */
+.image-editor button:active {
+    background-color: purple;
+    transform: scale(0.98);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }

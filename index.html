@@ -5,14 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exploration de Texte</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+
 </head>
 <body>
     <div class="container">
         <h1>Exploration de Texte et Recherche</h1>
-        <h2>Sur ce site, vous pouvez importer un texte et interagir avec chaque mot en cliquant dessus. Lorsque vous cliquez sur un mot, le site effectue une recherche sur Google et affiche les deux premiers résultats pertinents pour ce terme. C'est une façon simple et rapide d'explorer des informations supplémentaires sur des mots ou des concepts directement à partir de votre texte, tout en accédant à des résultats de recherche en temps réel.</h2>
+        <h2>Sur ce site, vous pouvez importer un <span>texte</span> et interagir avec <span>chaque mot</span> en cliquant dessus. Lorsque vous cliquez sur un mot, le site effectue une recherche sur <span>Google</span> et affiche les deux premiers <span>résultats pertinents</span> pour ce terme. C'est une façon simple et rapide d'explorer des informations supplémentaires sur des mots ou des concepts directement à partir de votre texte, tout en accédant à des résultats de recherche en temps réel. En plus de cette fonctionnalité, le site vous permet également d'importer une <span>image</span>...
+        </h2>
         <div class="file-upload">
-            <label for="fileInput">Importer un fichier texte ou Word (Les Word ne fonctionne pas encore) :</label>
-            <input type="file" id="fileInput" accept=".txt, .docx" onchange="importFile()">
+            <label for="fileInput">Importer un Fichier Texte</label>
+            <input type="file" id="fileInput" accept=".txt, .docx," onchange="handleFileImport(event)">
+        </div>
+        <div class="actions">
+            <button onclick="enableEditing()">Modifier le Texte</button>
+            <button onclick="downloadModifiedText()">Télécharger le Texte</button>
+        </div>   
+        <div class="image-editor">
+            <label for="imageInput">Importer une Image</label>
+            <input type="file" id="imageInput" accept=".png, .jpg, .jpeg" onchange="importImage(event)">
+            <div id="imageContainer"></div>
+            <button onclick="downloadImage()">Télécharger l'Image</button>
         </div>
         <div class="search-container">
             <input type="text" id="searchInput" placeholder="Rechercher un mot..." oninput="highlightWords()">
